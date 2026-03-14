@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .product{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+        padding:20px;
+      }
+      .card{
+        box-shadow: 0px 0px 10px;
+        background-color: lightblue;
+        text-align: center;
+        border-radius:10px;
+      }
+      .card img{
+        width:200px;
+        margin: 5px;
+      }
+      .card button{
+        background:#2563EB;
+        color:white;
+        border:none;
+        padding:8px 15px;
+        border-radius:5px;
+        cursor:pointer;
+      }
+      .card button:hover{
+        background:bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="card">
+        <img src="one piece cover page.jpg">
+        <h3>One Piece Manga</h3> 
+        <p>$30</p>
+        <button>Buy now</button>
+      </div>
+      <div class="card">
+          <img src="demon slayer manga cover page.webp">
+          <h3>Demon Slayer Manga</h3>
+          <p>$25</p>
+          <button>Buy now</button>
+      </div>
+      <div class="card">
+        <img src="jjk cover page.jpg" height="250px">
+        <h3>JJk Manga</h3>
+        <p>$28</p>
+          <button>Buy now</button>
+      </div>
+      <div class="card">
+        <img src="naruto cover page.jpg" height="270px">
+        <h3>Naruto Manga</h3>
+        <p>$24</p>
+        <button>Buy now</button>
+      </div>
+    </div>
+  </body>
+</html>

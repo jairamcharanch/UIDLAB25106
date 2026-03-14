@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .product{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:20px;
+        padding:20px;
+      }
+      .card{
+        box-shadow: 0px 0px 10px;
+        background-color: lightblue;
+        text-align: center;
+        border-radius:10px;
+      }
+      .card img{
+        width:200px;
+        margin: 5px;
+      }
+      .card button{
+        background:#2563EB;
+        color:white;
+        border:none;
+        padding:8px 15px;
+        border-radius:5px;
+        cursor:pointer;
+      }
+      .card button:hover{
+        background:bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="card">
+        <img src="one piece clothes.jpg">
+        <h3>One Piece</h3> 
+        <p>$200</p>
+        <button>Buy now</button>
+      </div>
+      <div class="card">
+          <img src="demon slayer clothes.webp">
+          <h3>Demon Slayer </h3>
+          <p>$199</p>
+          <button>Buy now</button>
+      </div>
+      <div class="card">
+        <img src="jjk clothes.webp" height="250px">
+        <h3>JJk </h3>
+        <p>$300</p>
+          <button>Buy now</button>
+      </div>
+      <div class="card">
+        <img src="naruto clothes.webp" height="270px">
+        <h3>Naruto</h3>
+        <p>$220</p>
+        <button>Buy now</button>
+      </div>
+    </div>
+  </body>
+</html>
