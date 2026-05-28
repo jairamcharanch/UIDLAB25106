@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Project
+        </title>
+        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="faq.css">
+        <link rel="stylesheet" href="payment.css">
+        <link rel="stylesheet" href="footer.css">
+        <script>
+        function changePlan(type, btn){
+            if(type=="monthly"){
+                document.getElementById("fanPrice").innerText="₹99/mo";
+                document.getElementById("megaPrice").innerText="₹149/mo";
+            } else {
+                document.getElementById("fanPrice").innerText="₹469/yr";
+                document.getElementById("megaPrice").innerText="₹569/yr";
+            }
+            let buttons = document.getElementsByTagName("button");
+            for(let i=0;i<buttons.length;i++){
+                buttons[i].classList.remove("active");
+            }
+            btn.classList.add("active");
+            }
+        </script>
+    </head>
+    <body class="body1">
+        <div class="div1">
+            <div class="header">
+                <div class="logo">Crunchyroll mini</div>
+
+                <div class="nav-buttons">
+                <a href="login.html">
+                    <button class="login" onclick="login()">LOG IN</button>
+                </a>
+                <a href="#plans">
+                    <button class="register">START FREE TRIAL</button>
+                </a>
+                </div>
+            </div>
+        <div class="main">
+            <div class="main-text">
+                <h1>Welcome to the world of anime.</h1>
+                <p>Join now and explore unlimited anime</p>
+                <a href="#plans">
+                    <button class="main-btn">START FREE TRIAL</button>
+                </a>
+            </div>
+        </div>
+        </div>
+        <div class="body2" id="plans">
+            <h1>Choose Your Plan</h1>
+            <div class="toggle">
+                <div class="toggle-box">
+                    <button class="active" onclick="changePlan('monthly', this)">Monthly</button>
+                    <button onclick="changePlan('yearly', this)">Yearly</button>
+                </div>
+            </div>
+            <div class="container">
+                <div class="card">
+                    <h1>Fan</h1>
+                    <div class="price" id="fanPrice">₹99/mon</div>
+                    <a href="https://sso.crunchyroll.com/register?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover">
+                        <button class="btn" onclick="register()">Start 7-Day Free Trial</button>
+                    </a>
+                    <a href="https://sso.crunchyroll.com/register?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover">
+                        <button class="trial" onclick="register()">Skip Free Trial</button>
+                    </a>
+                    <div class="features">
+                        <p><span>✔</span>No ads</p>
+                        <p><span>✔</span>Complete access to library</p>
+                        <p><span>✔</span>New episodes after Japan</p>
+                        <p><span>✔</span>1 device at a time</p>
+                        <p><span>✔</span>Offline Viewing</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h1>Mega Fan</h1>
+                    <div class="price" id="megaPrice">₹149/mo</div>
+                    <a href="https://sso.crunchyroll.com/register?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover">
+                        <button class="btn fill" onclick="register()">Start 7-Day Free Trial</button>
+                    </a>
+                    <a href="https://sso.crunchyroll.com/register?return_url=%2Fauthorize%3Fclient_id%3Dkmj7imhjt_q90lcbzzsj%26redirect_uri%3Dhttps%253A%252F%252Fwww.crunchyroll.com%252Fcallback%26response_type%3Dcookie%26state%3D%252Fdiscover">
+                        <button class="trial " onclick="register()">Skip Free Trial</button>
+                    </a>
+                    <div class="features">
+                        <p><span>✔</span>No ads</p>
+                        <p><span>✔</span>Complete access to library</p>
+                        <p><span>✔</span>New episodes after Japan</p>
+                        <p><span>✔</span>4 devices at a time</p>
+                        <p><span>✔</span>Offline Viewing</p>
+                        <p><span>✔</span>Game Vault Access</p>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top:40px; color:gray; font-size:12px; max-width:700px; margin-left:auto; margin-right:auto;">
+                Free trial offer valid for new users. Plans renew automatically. Cancel anytime.</p>
+            <h1>Already a member?</h1>
+            <a href="login.html">
+                <button class="log" >Login</button>
+            </a>
+            <h2>Get more with premium</h2>
+            <p>Enjoy Crunchyroll mini's entire library ad-free, including episodes shortly after being released in Japan.</p>
+            <a href="#plans">
+                <button class="scroll-btn" >scroll to plans ⬆️</button>
+            </a>
+            <div class="images">
+                <div>
+                    <img src="ad.png" alt="Ad" width="60%" height="60%">
+                    <p>Ad-free streaming</p>
+                </div>
+                <div>
+                    <img src="lib.png" alt="Library" width="60%" height="60%">
+                    <p>Complete access to library</p>
+                </div>
+                <div>
+                    <img src="new.png" alt="New" width="60%" height="60%">
+                    <p>New episodes after Japan</p>
+                </div>
+                <div>
+                    <img src="device.png" alt="Device" width="60%" height="60%">
+                    <p>Multi-device access</p>
+                </div>
+                <div>
+                    <img src="games.png" alt="Games" width="60%" height="60%">
+                    <p>Game Vault Access</p>
+                </div>
+                <div>
+                    <img src="download.png" alt="Download" width="60%" height="60%">
+                    <p>Download HD videos</p>
+                </div>
+            </div>
+            <p>Benefits may differ based on the selected subscription tier and the region in which you are located.</p>
+        <div class="body3">
+            <div class="faq-container">
+                <h2>FAQ</h2>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Does Crunchyroll offer a free trial?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            Crunchyroll offers a 7-day free trial of our Premium plans, letting users experience ad-free streaming and other benefits.
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What are the benefits of Crunchyroll Premium?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                          Premium members get access to the entire library ad-free, simulcasts shortly after Japan, and offline viewing capabilities.  
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                         Does Crunchyroll have dubbed anime?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            Yes, Crunchyroll offers both subtitled and dubbed versions of many popular anime titles.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        What anime titles can I watch on Crunchyroll?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                        Crunchyroll features a vast selection of anime, including popular titles such as One Piece, Solo Leveling, Attack on Titan, My Hero Academia, Jujutsu Kaisen, and many more.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How does Crunchyroll's streaming work?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                           Crunchyroll allows users to stream anime anytime, anywhere on various devices, including smartphones, tablets, gaming consoles, and smart TVs. Premium members enjoy higher-quality streaming and faster access to new episodes.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        Can I download anime on Crunchyroll?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                          Yes, Crunchyroll Premium members can download anime episodes for offline viewing on supported devices, allowing you to enjoy your favorite shows without an internet connection.  
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I activate Crunchyroll on my device?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                           Activating Crunchyroll is simple! Just open the Crunchyroll app on your device and select "Activate with Code." A six-character code will appear on your screen. Visit https://www.crunchyroll.com/activate on your computer or phone, enter the code, and you'll be logged in and ready to stream your favorite anime. 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        How do I cancel my subscription?
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="answer-content">
+                            You can manage your subscription through your profile settings. Simply navigate to 'Membership Info' and follow the cancellation prompts.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            function toggleFAQ(element) {
+                let item = element.parentElement;
+                
+                item.classList.toggle("active");
+                }
+                </script>
+            </div>
+            <div>
+                <h1>QUESTIONS?</h1>
+                <p>Visit our <span>
+                    <a href="https://help.crunchyroll.com/hc/en-us" class="help">Help Center</a>
+                </span> to know more.</p>
+            </div>
+            <div class="footer">
+                <div class="column">
+                    <h3>Key Pages</h3>
+                    <a href="https://www.crunchyroll.com/videos/new">Search New</a>
+                    <a href="https://www.crunchyroll.com/videos/popular">Popular Search</a>
+                    <a href="https://www.crunchyroll.com/videos/alphabetical">Search All</a>
+                    <a href="https://www.crunchyroll.com/simulcasts/seasons/spring-2025">Browse Simulcast</a>
+                    <a href="https://www.crunchyroll.com/simulcastcalendar">Release Calendar</a>
+                    <a href="https://www.crunchyroll.com/music">Music & Concert Videos</a>
+                    <a href="https://www.crunchyroll.com/games/">Games</a>
+                    <a href="https://www.crunchyroll.com/news">News</a>
+                    <a href="https://www.crunchyroll.com/animeawards/">Anime Awards</a>
+                    <a href="https://www.crunchyroll.com/events/">Events & Experiences</a>
+                </div>
+
+                <div class="column">
+                    <h3>Genre</h3>
+                    <a href="https://www.crunchyroll.com/videos/action">Action</a>
+                    <a href="https://www.crunchyroll.com/videos/adventure">Adventure</a>
+                    <a href="https://www.crunchyroll.com/videos/comedy">Comedy</a>
+                    <a href="https://www.crunchyroll.com/videos/drama">Drama</a>
+                    <a href="https://www.crunchyroll.com/videos/fantasy">Fantasy</a>
+                    <a href="https://www.crunchyroll.com/videos/music">Music</a>
+                    <a href="https://www.crunchyroll.com/videos/romance">Romance</a>
+                    <a href="https://www.crunchyroll.com/videos/sci-fi">Sci-Fi</a>
+                    <a href="https://www.crunchyroll.com/videos/slice-of-life">Slice of Life</a>
+                    <a href="https://www.crunchyroll.com/videos/shojo">Shojo</a>
+                    <a href="https://www.crunchyroll.com/videos/shonen">Shounen</a>
+                    <a href="https://www.crunchyroll.com/videos/sports">Sports</a>
+                    <a href="https://www.crunchyroll.com/videos/seinen">Seinen</a>       
+                    <a href="https://www.crunchyroll.com/videos/thriller">Thriller</a>   
+                </div>
+
+                <div class="column">
+                    <h3>Top 15 Popular Series</h3>
+                    <a href="https://www.crunchyroll.com/series/G3KHEVDJ7/the-apothecary-diaries">Apothecary Diaries</a>
+                    <a href="https://www.crunchyroll.com/series/GR751KNZY/attack-on-titan">Attack on Titan</a>
+                    <a href="https://www.crunchyroll.com/series/G4PH0WEKE/blue-lock">Blue Lock</a>
+                    <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba">Demon Slayer</a>
+                    <a href="https://www.crunchyroll.com/series/GG5H5XQ35/dragon-ball-daima">Dragon Ball DAIMA</a>
+                    <a href="https://www.crunchyroll.com/series/GR19V7816/dragon-ball-super">Dragon Ball Super</a>
+                    <a href="https://www.crunchyroll.com/series/GYQWNXPZY/fire-force">Fire Force</a>
+                    <a href="https://www.crunchyroll.com/series/GRDV0019R/jujutsu-kaisen">Jujutsu Kaisen</a>
+                    <a href="https://www.crunchyroll.com/series/GG5H5XQ7D/kaiju-no-8">Kaiju No 8</a>
+                    <a href="https://www.crunchyroll.com/series/G6NQ5DWZ6/my-hero-academia">My Hero Academia</a>
+                    <a href="https://www.crunchyroll.com/series/GY9PJ5KWR/naruto">Naruto</a>
+                    <a href="https://www.crunchyroll.com/series/GYQ4MW246/naruto-shippuden">Naruto Shippuden</a>
+                    <a href="https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece">One Piece</a>
+                    <a href="https://www.crunchyroll.com/series/GDKHZEJ0K/solo-leveling">Solo Leveling</a>
+                    <a href="https://www.crunchyroll.com/series/G4PH0WXVJ/spy-x-family">Spy x Family</a>
+                </div>
+
+                <div class="column">
+                    <h3>Language</h3>
+                    <a href="https://www.crunchyroll.com/">English (US)</a>
+                    <a href="https://www.crunchyroll.com/id/">Indionesia</a>
+                    <a href="https://www.crunchyroll.com/de/">German</a>
+                    <a href="https://www.crunchyroll.com/es/">Spanish (Latin America)</a>
+                    <a href="https://www.crunchyroll.com/es-es/">Spanish (Spain)</a>
+                    <a href="https://www.crunchyroll.com/fr/">French</a>
+                    <a href="https://www.crunchyroll.com/it/">Italian</a>
+                    <a href="https://www.crunchyroll.com/pt-br/">Portuguese (Brazil)</a>
+                    <a href="https://www.crunchyroll.com/pt-pt/">Portuguese (Portugal)</a>
+                    <a href="https://www.crunchyroll.com/hi/">Hindi</a>
+                    <a href="https://www.crunchyroll.com/ru/">Russian</a>
+                    <a href="https://www.crunchyroll.com/ar/">Arabic</a>
+                    <a href="https://www.crunchyroll.com/hi/">Hindi</a>
+                    <a href="https://www.crunchyroll.com/th/">Thai</a>
+                </div>
+
+                <div class="column">
+                    <h3>Crunchyroll</h3>
+                    <a href="https://www.crunchyroll.com/about/">About</a>
+                    <a href="https://help.crunchyroll.com/hc/en-us">Help Center</a>
+                    <a href="https://www.crunchyroll.com/tos/">Terms of Service</a>
+                    <a href="https://intl.sonypictures.com/en/privacy-policy">Privacy Policy</a>
+                    <a href="https://www.sonypictures.com/corp/privacy.html#section11B">AdChoices</a>
+                    <a href="https://privacyportal-cdn.onetrust.com/dsarwebform/d19e506f-1a64-463d-94e4-914dd635817d/b9eb997c-9ede-451b-8fd4-29891782a928.html">Do Not Sell Info</a>
+                    <a href="https://www.crunchyroll.com/about/jobs">Jobs</a>
+                    <a href="https://www.crunchyroll.com/redeem">Redeem</a>
+                    <a href="https://www.crunchyroll.com/devices/">Get the App</a>
+                </div>
+
+                <div class="column">
+                    <h3>Follow Us</h3>
+                    <a href="https://www.youtube.com/@Crunchyroll">YouTube</a>
+                    <a href="https://www.facebook.com/Crunchyroll/">Facebook</a>
+                    <a href="https://x.com/crunchyroll">Twitter</a>
+                    <a href="https://www.instagram.com/crunchyroll/">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <div class="sony">
+                    <p>SONY PICTURES  |  © CRUNCHYROLL MINI</p>
+                </div>
+            </div>
+
+            <div class="container2">
+                <div class="column1">
+                    
+                    <p>
+                        Welcome to Crunchyroll, your ultimate destination for streaming the best in anime entertainment.
+                        Whether you’re a lifelong fan or just starting your anime journey, Crunchyroll offers an extensive
+                        library of top-tier anime series and movies.
+                    </p>
+
+                    <div class="extra-text" id="leftText">
+                        <p>
+                            From action-packed adventures like Naruto and One Piece to fan-favorites such as Demon Slayer and
+                            Attack on Titan, we bring the world of anime right to your screen. With thousands of hours of
+                            content, you’ll find something for every mood and taste.
+                        </p>
+                        <br>
+                        <p>
+                            At Crunchyroll, we take pride in being the go-to-platform for anime lovers around the world.
+                            You can dive into a wide variety of genres, including fantasy, slice of life, and sci-fi,
+                            ensuring there’s always something new to discover.
+                        </p>
+                    </div>
+                    <div class="btn2" onclick="toggleDetails()" id="toggleBtn">MORE DETAILS</div>
+                </div>
+                
+                <div class="column1">
+                    <p>
+                        With simulcasts straight from Japan, you’ll never miss a moment of the latest and greatest anime
+                        releases. Our selection goes beyond just series— enjoy a handpicked selection of anime movies
+                        that showcase the best in animation and storytelling.
+                    </p>
+                    <div class="extra-text" id="rightText">
+                    <br>
+
+                    <p>
+                        Watch anytime, anywhere, with the Crunchyroll app available across all your devices.
+                    </p>
+                    <br>
+                    
+                    <p>
+                        Beyond streaming, Crunchyroll is a hub for all things anime. Explore the Crunchyroll Store for
+                        exclusive anime merchandise, collectibles, and apparel. Stay updated with Crunchyroll News,
+                        delivering the latest on anime, manga, and pop culture.
+                    </p>
+                    <br>
+                    
+                    <p>
+                        And for gamers, Crunchyroll Games brings your favorite anime worlds to life in exciting and
+                        interactive ways. Join the Crunchyroll community and immerse yourself in a world where anime
+                        is more than just a genre—it’s a lifestyle.
+                    </p>
+                    </div>
+                </div>      
+            </div> 
+
+            <script>
+            function toggleDetails(){
+                
+                let leftText = document.getElementById("leftText");
+                let rightText = document.getElementById("rightText");
+                let button = document.getElementById("toggleBtn");
+                
+                if(leftText.style.display === "block"){
+                    leftText.style.display = "none";
+                    rightText.style.display = "none";
+                    button.innerHTML = "MORE DETAILS";
+                } 
+                else{
+                    leftText.style.display = "block";
+                    rightText.style.display = "block";
+                    button.innerHTML = "FEWER DETAILS";
+                }
+            }
+            </script>
+            </div>
+    </body>
+</html>
