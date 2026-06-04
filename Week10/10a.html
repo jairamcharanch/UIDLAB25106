@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign of Product</title>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        form {
+            background-color: wheat;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function findSign() {
+            let a = parseInt(prompt("Enter first number:"));
+            let b = parseInt(prompt("Enter second number:"));
+            let c = parseInt(prompt("Enter third number:"));
+
+            let product = a * b * c;
+
+            if (product > 0) {
+                alert("The sign is + (Positive)");
+            } 
+            else if (product < 0) {
+                alert("The sign is - (Negative)");
+            } 
+            else {
+                alert("The product is 0");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+    <form>
+    <h2>Find Sign of Product</h2>
+    <button onclick="findSign()">Enter Numbers</button>
+    </form>
+</body>
+</html>

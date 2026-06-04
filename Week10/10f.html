@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            background-color: bisque;
+        }
+        div{
+            box-shadow: 0 0 5px black;
+            margin:auto auto;
+            padding: 30px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            background-color: wheat;
+        }
+        div h3{
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border-radius: 50px;
+        }
+        table{
+            border: 1px solid black ;
+            border-spacing: 0;
+        }
+        th,td{
+            padding: 10px;
+        }
+        button{
+            margin:10px;
+            min-width:500px;
+            font-size: larger;
+            border-radius: 10px;
+            border: none;
+            background-color:red;
+            color: white;
+            padding: 10px;
+            box-shadow: 0 0 2px black;
+        }
+        input{
+            width: 50px;
+            padding: 10px;
+        }
+        input :focus{
+            border: 1px solid red ;
+        }
+        thead{
+            background-color: rgb(206, 203, 203);
+        }
+        button:hover{
+            transform: translateY(-2px);
+            box-shadow: 0 2px 2px grey;
+        }
+    </style>
+</head>
+<body>
+    <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+    <div>
+        <h3>Grade Claculator</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th >S.NO</th>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td>Subject 1</td>
+                    <td><input type="number" name="mark1" value="0" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Subject 2</td>
+                    <td><input type="number" name="mark1" value="0" min="0" max="100"></td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Subject 3</td>
+                    <td><input type="number" name="mark1" value="0" class="mark1" min="0" max="100"></td>
+
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>Subject 4</td>
+                    <td><input type="number" name="mark1" value="0" class="mark1" min="0" max="100"></td>
+                
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>Subject 5</td>
+                    <td><input type="number" name="mark1" value="0" class="mark1" min="0" max="100"></td>
+        
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td>Subject 6</td>
+                    <td><input type="number" name="mark1" value="0" class="mark1" min="0" max="100"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="button" onclick="calculate_marks()">Result</button>
+
+        <table>
+            <tr>
+                <th>Total marks</th>
+                <th>Percentage</th>
+                <th>Average</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td id="total_marks">-</td>
+                <td id="percentage">-</td>
+                <td id="average">-</td>
+                <td id="grade">-</td>
+            </tr>
+        </table >
+    </div>   
+        <script>
+        function calculate_marks(){
+            let elements = document.getElementsByTagName("input");
+            var total = 0;
+            for(let i=0;i<elements.length;i++){
+                total+=parseInt(elements[i].value);
+            }
+            document.getElementById("total_marks").innerHTML=total;
+            let average = total/6;
+            document.getElementById("percentage").innerHTML=average;
+            document.getElementById("average").innerHTML=average;
+            document.getElementById("grade").innerHTML=grade(average);
+        }
+        function grade(average){
+            if(average>=100){
+                return "O"
+            }
+            else if(average>=90){
+                return "A";
+            }
+            else if(average>=80){
+               return "B";
+            }
+            else if(average>=70){
+               return "C";
+            }
+            else if(average>=60){
+                return "D";
+            }
+            else{
+                return "F";
+            }
+        }
+    </script>
+    
+</body>
+</html>
