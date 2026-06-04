@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>9a</title>
+        <style>
+            body{
+                background-color: bisque;
+            }
+            .container{
+                display:grid;
+                grid-template-areas:
+                "header header"
+                "frame1 frame2"
+                "frame3 frame4";
+                grid-template-rows: auto 1fr 1fr auto;
+                grid-template-columns:1fr 1fr ;
+                gap:20px;
+            }
+            .header{
+                grid-area: header;
+                text-align: center;
+                background-color: wheat;
+                border-radius: 10px;
+                margin-left: 40px;
+                margin-right: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .frame1{
+                grid-area:frame1;
+                background-color: wheat;
+                max-width: 500px;
+                min-height: 100px;
+                text-align: center;
+                justify-content: center;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .frame2{
+                grid-area:frame2;
+                background-color: wheat;
+                max-width: 500px;
+                min-height: 100px;
+                text-align: center;
+                justify-content: center;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .frame3{
+                grid-area:frame3;
+                background-color:wheat;
+                max-width: 500px;
+                min-height: 100px;
+                text-align: center;
+                justify-content: center;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            .frame4{
+                grid-area:frame4;
+                background-color: wheat;
+                max-width: 500px;
+                min-height: 100px;
+                text-align: center;
+                justify-content: center;
+                border-radius: 10px;
+                margin-left: 50px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+            button{
+                margin-bottom: 10px;
+                border:none;
+                font-size: large;
+                background-color: wheat;
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                border-radius: 3px;;
+            }
+            button:hover{
+                background-color: wheat;
+                box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+                transform: scale(1.02)
+
+            }
+        </style>
+    </head>
+    <body>
+        <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+        <script>
+            function even_odd(){
+                const x= document.getElementById('even').value;
+                const display = document.getElementById('res_1');
+                const y = parseInt(x);
+                if (y%2===0){
+                    display.innerHTML = y + " Is even";
+                }
+                else{
+                    display.innerHTML = y + " Is odd";
+                }
+            }
+            function factorial(){
+                const x= document.getElementById('fac').value;
+                const display = document.getElementById('res_2');
+                const y = parseInt(x);
+                var fact=1;
+                for(var i=1;i<=x;i++){
+                    fact*=i;
+                }
+                display.innerHTML="Factorial of the number is: " + fact
+                
+            }
+            function prime(){
+                const x= document.getElementById('pri').value;
+                const display = document.getElementById('res_3');
+                const y = parseInt(x);
+                
+                let isPrime = true;
+
+                for(let i = 2; i <= Math.sqrt(y);i++){
+                    if(y%1 === 0){
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if(isPrime){
+                    display.innerHTML = y + " Is a Prime Number";
+                }
+                else{
+                    display.innerHTML = y + " Is not a Prime Number";
+                }
+            }
+            function amstrong(){
+                const x= document.getElementById('ang').value;
+                const display = document.getElementById('res_4');
+                const y = parseInt(x);
+                var sum=0;
+                var temp=y;
+                
+                const dig = x.length;
+
+                while(temp>0){
+                    let rem = temp%10;
+                    sum += Math.pow(rem,dig);
+                    temp = Math.floor(temp/10);
+                }
+                if(sum===y){
+                    display.innerHTML = y + " Is an arsmtrong number"
+                }
+                else{
+                    display.innerHTML = y + " Is not an arsmtrong number"
+                }
+            }
+        </script>
+        <div class="container">
+            <div class="header"><h1>Javascript Applications</h1></div>
+            <div class="frame1">
+                <h3>Check even or odd</h3>
+                <input type="number" id="even">
+                <button onclick="even_odd()">Even or Odd</button>
+                <p id="res_1">The result is</p>
+            </div>
+            <div class="frame2">
+                <h3>Check factorial</h3>
+                <input type="number" id="fac">
+                <button onclick="factorial()">Find factorial</button>
+                <p id="res_2">The factorial of the number is </p>
+            </div>
+            <div class="frame3">
+                <h3>Check Prime or Not</h3>
+                <input type="number" id="pri">
+                <button onclick="prime()">Prime or not</button>
+                <p id="res_3">The result is</p>
+            </div>
+            <div class="frame4">
+                <h3>Check Armstrong Number</h3>
+                <input type="number" id="ang">
+                <button onclick="amstrong()">Armstrong or not</button>
+                <p id="res_4">The result is</p>
+            </div>
+            
+        </div>
+        
+
+    </body>
+</html>
