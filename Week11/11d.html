@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mobile Number Validation</title>
+    <script>
+        function validateMobile() {
+            let mobile = document.getElementById("mobile").value;
+            let message = document.getElementById("msg");
+
+            let pattern = /^[0-9]{10}$/;
+
+            if (!pattern.test(mobile)) {
+                message.innerHTML = " Enter a valid 10-digit mobile number";
+                message.style.color = "red";
+            } else {
+                message.innerHTML = " Valid mobile number";
+                message.style.color = "green";
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: bisque;">
+    <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+    <h2>Mobile Number Validation</h2>
+
+    <form>
+        <label>Enter Mobile Number:</label><br><br>
+        <input type="text" id="mobile" onblur="validateMobile()">
+        <p id="msg"></p>
+    </form>
+
+</body>
+</html>

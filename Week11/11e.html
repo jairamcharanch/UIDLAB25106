@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: bisque;
+            text-align: center;
+        }
+        form {
+            background: wheat;
+            padding: 20px;
+            margin: auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let nameError = document.getElementById("nameError");
+            let emailError = document.getElementById("emailError");
+            let passError = document.getElementById("passError");
+
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+            passError.innerHTML = "";
+
+            let valid = true;
+
+            if (name === "") {
+                nameError.innerHTML = "Name cannot be empty";
+                valid = false;
+            }
+
+            let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                emailError.innerHTML = "Enter a valid email";
+                valid = false;
+            }
+
+            if (password.length < 6) {
+                passError.innerHTML = "Password must be at least 6 characters";
+                valid = false;
+            }
+            return valid;
+        }
+    </script>
+</head>
+
+<body>
+    <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+        <input type="text" id="name" placeholder="Enter Name">
+        <div id="nameError" class="error"></div>
+
+        <input type="text" id="email" placeholder="Enter Email">
+        <div id="emailError" class="error"></div>
+
+        <input type="password" id="password" placeholder="Enter Password">
+        <div id="passError" class="error"></div>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>

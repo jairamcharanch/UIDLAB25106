@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+</head>
+<body style="background-color: bisque;">
+    <p style="text-align: center;color:red;font-size: large;">My name is CH. JAI RAM CHARAN,Roll no - 25106,Sec:CSE-B.</p>
+    <h2>Check Password Strength</h2>
+
+    <input type="password" id="password" placeholder="Enter password" oninput="checkStrength()">
+    <p id="result"></p>
+
+    <script>
+        function checkStrength() {
+            var password = document.getElementById("password").value;
+            var result = document.getElementById("result");
+
+            if (password.length < 5) {
+                result.innerHTML = "Weak Password";
+                result.style.color = "red";
+            } 
+            else if (password.match(/[a-z]/) && 
+                     password.match(/[0-9]/) && 
+                     password.match(/[@$!%*?&]/)) {
+                result.innerHTML = "Strong Password";
+                result.style.color = "green";
+            } 
+            else {
+                result.innerHTML = "Medium Password";
+                result.style.color = "orange";
+            }
+        }
+    </script>
+
+</body>
+</html>
